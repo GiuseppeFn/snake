@@ -9,7 +9,6 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdLin
     HWND window = create_window(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
     if(window == NULL) return EXIT_FAILURE;
     HANDLE heap = GetProcessHeap();
-    printf("ok");
 
     snake = (obj*) HeapAlloc(heap, 0, sizeof(obj) * snake_memory); head = &snake[0];
     head->x = (int) SCREEN_WIDTH/2.0; head->y = SCREEN_HEIGHT/2.0;
